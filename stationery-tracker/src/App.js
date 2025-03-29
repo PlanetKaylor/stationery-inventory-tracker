@@ -1,12 +1,15 @@
-import logo from './logo.svg';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import './index.css';
+import HomePage from './pages/HomePage';
 
 export default function App() {
-  return (
-    <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-blue-500 to-purple-600 text-white text-4xl font-bold">
-      🚀 Tailwind is working!
-    </div>
-  );
+    return (
+      <BrowserRouter>
+        <Routes>
+          <Route path="/home" element={<HomePage />} />
+        </Routes>
+      </BrowserRouter>
+    );
 }
 
 
